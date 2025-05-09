@@ -1,7 +1,7 @@
 async function fetchRandomCatImage() {
   try {
     console.log('buscando imagem de gato...')
-    const response = await fetch("https://api.thecatapi.com/v1/images/search")
+    const response = await fetch('https://nekos.best/api/v2/neko')
 
     if (!response.ok) {
       throw new Error(`Erro na API: ${response.status}`);
