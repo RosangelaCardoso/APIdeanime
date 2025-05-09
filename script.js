@@ -19,17 +19,17 @@ async function fetchRandomCatImage() {
   }
 }
 
-function displayCatImage(catImage) {
+function displayCatImage(AMINEImage) {
   const imageElement = document.createElement('img');
 
-  imageElement.src = catImage.url;
-  imageElement.alt = 'Foto de um gato';
+  imageElement.src = AMINEImage.url;
+  imageElement.alt = 'Foto de um ANIME';
   imageElement.style.maxWidth = '100%';
 
   const infoElement =  document.createElement('p');
-  infoElement.textContent = `ID da imagem: ${catImage.id}, largura: ${catImage.width}px, Altura: ${catImage.height}px`
+  infoElement.textContent = `ID da imagem: ${AMINEImage.id}, largura: ${AMINEImage.width}px, Altura: ${AMINEImage.height}px`
 
-  const container = document.getElementById('cat-container');
+  const container = document.getElementById('AMINE-container');
 
   container.innerHTML = '';
   container.appendChild(imageElement);
@@ -42,7 +42,7 @@ async function loadCatImage() {
 
     const catImage = await fetchRandomCatImage();
 
-    displayCatImage(catImage);
+    displayCatImage(AMINEImage);
 
     document.getElementById('status').textContent = "imagem carregada com sucesso!";
 
